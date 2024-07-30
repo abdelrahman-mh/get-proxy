@@ -62,7 +62,6 @@ class ProxyFetcher:
             "invalid_sources": 0,
             "pending_sources": 0,
         }
-        asyncio.Semaphore
 
     async def __print_monitoring_info(self, infinite: bool = True):
         reset = "\033[0m"
