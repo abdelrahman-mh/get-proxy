@@ -1,6 +1,6 @@
-**أهلا وسهلا** 🖐
+# أهلا وسهلا 🖐
 
-What you will find here: Unlimited collecting, validating, and caching free proxies. Collect form any endpoints includes —Text APIs, JSON APIs, or web pages— by simply adding URLs to the **proxy_sources.txt** file, Automatically handle collecting (scraping) validation, and caching. All this done very fast ✨
+**What you will find here**: Unlimited collecting, validating, and caching free proxies. Collect form any endpoints includes: Text APIs, JSON APIs, or web pages, by simply adding URLs to the **proxy_sources.txt** file, Automatically handle collecting (scraping) validation, and caching. All this done very fast ✨
 
 <p align="center">
   <img src="./docs/screenshot.png" alt="Description of Image" />
