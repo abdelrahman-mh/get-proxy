@@ -116,9 +116,7 @@ If your JSON response looks like this:
     "PORT": "80",
     "foo": "bar"
   },
-  {
-    ...
-  },
+  {"..."},
 ]
 ```
 
