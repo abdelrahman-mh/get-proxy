@@ -238,7 +238,6 @@ class ProxyFetcher:
                 source_urls = [
                     line for line in file.read().splitlines() if line.strip()
                 ]
-                print(source_urls)
                 self._status["total_sources"] = len(source_urls)
 
             self._monitor_status_task = asyncio.create_task(
