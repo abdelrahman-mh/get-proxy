@@ -6,7 +6,7 @@ What you will find here: Unlimited collecting, validating, and caching free prox
   <img src="./docs/screenshot.png" alt="Description of Image" />
 </p>
 
-## How it works
+## Features
 
 We support **HTTP**, **HTTPS** proxies for validating (soon Socks4 & 5)
 
@@ -39,30 +39,20 @@ Here's basics example without any options or configuration:
 
 ```py
 import asyncio
-from get_proxy import ProxyFetcher  # import it
+from get_proxy import ProxyFetcher  # import the module
 
 
 async def main():
-    # it's a context manager, you can use it without `with` keyword also
-    # Like:
-    # proxy_fetcher = ProxyFetcher()
-    # valid_proxies = await proxy_fetcher.get_valid_proxies()
-    # # process the result like you want
-    # print(valid_proxies)
-
-    # after end, you can close it by:
-    # await proxy_fetcher.close() # this will close `aiohttp` session
-
-    async with ProxyFetcher() as proxy_fetcher:
-        valid_proxies = await proxy_fetcher.get_valid_proxies()
-        # process proxies as you want
-        print(valid_proxies)
+  async with ProxyFetcher() as proxy_fetcher:
+      valid_proxies = await proxy_fetcher.get_valid_proxies()
+      # process proxies as you want
+      print(valid_proxies)
 
 
 asyncio.run(main())
 ```
 
-### Use ProxyConfig()
+### Use ProxyConfig():
 
 Lets enable proxy caching, and set cache duration to 5m.
 
@@ -82,6 +72,8 @@ async def main():
     proxy_fetcher = ProxyFetcher(config)
     proxies = await proxy_fetcher.get_valid_proxies()
     print(proxies)
+
+    # after end!
     await proxy_fetcher.close()
 
 
@@ -147,8 +139,8 @@ http://example.com/api/free-proxy?format=json json=true&ip=IP&port=PORT
 - Clone repo, and navigate to working director:
 
 ```bash
-git clone ect
-cd get_proxy
+git clone https://github.com/abdelrahman-mh/get-proxy
+cd get-proxy
 ```
 
 - Setup working directory:
