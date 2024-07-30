@@ -159,9 +159,15 @@ pip install -r requirements.txt
 python3 get_proxy.py
 ```
 
-## Config 🔧
+## Reference 📚
 
-Proxy fetcher configuration customize it as you want:
+**`ProxyFetcher()`**:
+
+```python
+ProxyFetcher(config=ProxyConfig())
+```
+
+**`ProxyConfig()`**:
 
 ```python
 ProxyConfig(
@@ -180,7 +186,7 @@ ProxyConfig(
 )
 ```
 
-#### Options
+**Options**
 
 - **`prefix`**: Proxy URL prefix (default: `"http://"`).
 - **`user_agent`**: User-agent string (default: `"Mozil..."`).
