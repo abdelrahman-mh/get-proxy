@@ -159,28 +159,37 @@ python3 get_proxy.py
 
 ## Reference 📚
 
-**`ProxyFetcher()`**:
+### `ProxyFetcher()`:
 
 ```python
-ProxyFetcher(config=ProxyConfig())
+ProxyFetcher(config: ProxyConfig = ProxyConfig())
 ```
 
-**`ProxyConfig()`**:
+**Options**
+
+- **`config`**: ProxyConfig class! (default: `ProxyConfig()`)
+
+**Methods**
+
+- **`ProxyFetcher.get_valid_proxies() -> list[str]`**: return valid proxy list ready to use
+  - Asynchronous, must call with `await` keyword
+
+### `ProxyConfig()`:
 
 ```python
 ProxyConfig(
-    prefix="http://",
-    user_agent="Mozil...",
-    ip_check_api="http://httpbin.org/ip",
-    request_timeout=15,
-    retry=0,
-    concurrency_limit=500,
-    proxy_sources_file="proxy_sources.txt",
-    proxy_cache_file="proxy_cache.txt",
-    cache_enabled=False,
-    cache_duration_minutes=20,
-    enforce_unique_ip=True,
-    strict_x_forwarded_for=False
+    prefix: str = "http://",
+    user_agent: str = "Mozil...",
+    ip_check_api: str = "http://httpbin.org/ip",
+    request_timeout: int = 15,
+    retry: int = 0,
+    concurrency_limit: int = 500,
+    proxy_sources_file: str = "proxy_sources.txt",
+    proxy_cache_file: str = "proxy_cache.txt",
+    cache_enabled: bool = False,
+    cache_duration_minutes: int = 20,
+    enforce_unique_ip: bool = True,
+    strict_x_forwarded_for: bool = False
 )
 ```
 
